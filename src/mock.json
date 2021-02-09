@@ -1,0 +1,66 @@
+{
+    "results": [
+        {
+            "gender": "female",
+            "name": {
+                "title": "Miss",
+                "first": "Jade",
+                "last": "Smith"
+            },
+            "location": {
+                "street": {
+                    "number": 5765,
+                    "name": "Argyle St"
+                },
+                "city": "Sidney",
+                "state": "British Columbia",
+                "country": "Canada",
+                "postcode": "X0Y 9H0",
+                "coordinates": {
+                    "latitude": "-64.2206",
+                    "longitude": "25.2057"
+                },
+                "timezone": {
+                    "offset": "-3:30",
+                    "description": "Newfoundland"
+                }
+            },
+            "email": "jade.smith@example.com",
+            "login": {
+                "uuid": "8d2592c1-49ea-4a9d-8dfe-f4f2803ad6dc",
+                "username": "tinyzebra352",
+                "password": "viewsoni",
+                "salt": "J5OPLZrZ",
+                "md5": "497513fdaf2b088cc32c30086eef8a5d",
+                "sha1": "c7d08934ef2ec41eb7f52e962634ab8bc7d5892c",
+                "sha256": "2a61664091589b8fe09bcee621f001b100f9487b2142fa4fd63e6af13dfacfae"
+            },
+            "dob": {
+                "date": "1995-09-03T05:21:35.617Z",
+                "age": 26
+            },
+            "registered": {
+                "date": "2004-06-20T17:43:15.776Z",
+                "age": 17
+            },
+            "phone": "026-848-7003",
+            "cell": "578-944-7261",
+            "id": {
+                "name": "",
+                "value": null
+            },
+            "picture": {
+                "large": "https://randomuser.me/api/portraits/women/51.jpg",
+                "medium": "https://randomuser.me/api/portraits/med/women/51.jpg",
+                "thumbnail": "https://randomuser.me/api/portraits/thumb/women/51.jpg"
+            },
+            "nat": "CA"
+        }
+    ],
+    "info": {
+        "seed": "56c73362644d3a95",
+        "results": 1,
+        "page": 1,
+        "version": "1.3"
+    }
+}
