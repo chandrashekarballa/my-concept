@@ -36,6 +36,7 @@ class Samplefetch extends Component {
                 <div>Loading......</div> : 
                 <div>
                 <div>{this.state.details.gender}</div>
+                <div>Hello</div>
                 <div>{this.state.details.name.first}</div>
                 <img src={this.state.details.picture.large}/>
                 </div>
