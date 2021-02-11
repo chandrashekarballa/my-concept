@@ -14,7 +14,7 @@ class Home extends Component {
 
     onFetch(){
       this.props.homeFetchExampledata(); 
-        
+        /* console.log("onfetch",this.props.mainstate[0].picture.large) */
     }
 
     onLoad(){
@@ -25,18 +25,27 @@ class Home extends Component {
         return(
             <div>
                <button onClick={()=>{this.onLoad()}}>Reload </button>
+              
+
             </div>
         )
     }
 }
 
+function mapStateToProps(state){
+   console.log("state from reducer",state)
+   return {
+       mainstate : state.mainfetch.data
+   }
+}
+
 function mapDispatchToProps(dispatch){
     return {
-        homeFetchExampledata: () => homeFetchExampledata()
+        homeFetchExampledata: (data) => dispatch(homeFetchExampledata(data)),
     }
 }
 
-export default connect(mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
 
 
 

@@ -10,7 +10,7 @@ class Samplefetch extends Component {
     }
      componentDidMount(){
        
-        const Url = 'http://localhost:8000/results';
+     /*    const Url = 'http://localhost:8000/results'; */
         /* fetching data from json server */
        /*  steps to creat Json server */
        /* 
@@ -19,13 +19,13 @@ class Samplefetch extends Component {
          3- Run with this command in new terminal "npx json-server --watch DB/mock.json --port 8000" 
          4- react and json server has to run in different terminals 
        */
-        const response =  fetch(Url)
+       /*  const response =  fetch(Url)
         .then(res =>{
             return res.json();
         })
         .then(data =>{
             this.setState({details: data[0], loader: false})
-        })
+        }) */
     }
 
     render(){

@@ -1,5 +1,5 @@
 {
-    "results": [
+    "results": 
         {
             "gender": "female",
             "name": {
@@ -56,7 +56,7 @@
             },
             "nat": "CA"
         }
-    ],
+    ,
     "info": {
         "seed": "56c73362644d3a95",
         "results": 1,
