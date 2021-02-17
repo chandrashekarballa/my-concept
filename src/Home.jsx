@@ -1,51 +1,55 @@
-import React, {Component, Fragment} from 'react';
+import react, { Component, Fragment } from 'react';
+import Samplefetch from '../src/components/samplefetch/Samplefetch';
+import RichTextEditor from '../src/components/richtexteditor/RichTextEditor';
+import LoginAuthentication from './LoginAuthentication'
 import { connect } from 'react-redux';
-import homeFetchExampledata from './actions/Home.Action';
 class Home extends Component {
-    constructor(props){
-     super(props);
-    this.onLoad = this.onLoad.bind(this);
 
-    
-    }
-     componentDidMount(){
-        this.onFetch();
+    constructor(props) {
+        super(props);
+
     }
 
-    onFetch(){
-      this.props.homeFetchExampledata(); 
-        /* console.log("onfetch",this.props.mainstate[0].picture.large) */
-    }
+    render() {
+   const {  Loading}  = this.props;
+        if (this.props.loginStatus) {
+           
+            return (
+                <Fragment>
+                {Loading ?  
+                    <div className="spinner-border text-info"></div>:
+                 
+                    <div>
+                    
+                <Samplefetch />
+                <RichTextEditor />
+              </div>
 
-    onLoad(){
-        window.location.reload();
-    }
+                }
+                </Fragment>
+                
+                
+           )
+        }
 
-    render(){
-        return(
+        return (
             <div>
-               <button onClick={()=>{this.onLoad()}}>Reload </button>
-              
-
+                <LoginAuthentication />
+                
             </div>
-        )
+
+        );
     }
 }
 
-function mapStateToProps(state){
-   console.log("state from reducer",state)
-   return {
-       mainstate : state.mainfetch.data
-   }
-}
-
-function mapDispatchToProps(dispatch){
+function mapStateToProps(state) {
+    console.log("state from reducer", state)
     return {
-        homeFetchExampledata: (data) => dispatch(homeFetchExampledata(data)),
+        mainstate: state.mainfetch.data,
+        loginStatus: state.logindetails.LoginSuccessfull,
+        Loading: state.logindetails.Spinner
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
 
-
-
+export default connect(mapStateToProps)(Home);
