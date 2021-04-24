@@ -9,3 +9,8 @@ export const LoginCheck_SUCCESS = "LoginCheck_SUCCESS"
 export const LoginCheck_FAILURE = "LoginCheck_FAILURE"
 
 
+export const CURDSAVE_REQUEST=  "CURDSAVE_REQUEST"
+export const CURDSAVE_SUCCESS = "CURDSAVE_SUCCESS"
+export const CURDSAVE_FAILURE = "CURDSAVE_FAILURE"
+
+
